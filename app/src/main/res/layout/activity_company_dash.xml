@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_view"
-    tools:context=".company_dash">
+    tools:context="com.example.JobApp.company_dash">
 
     <TextView
         android:id="@+id/recieve_jobs"
@@ -99,33 +99,6 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_margin="20dp">
-
-            <Button
-                android:id="@+id/notifi"
-                android:layout_width="240dp"
-                android:layout_height="110dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="0dp"
-                android:backgroundTint="@color/design_default_color_on_primary"
-                android:padding="20dp"
-                android:text="Notification"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="190dp"
-                android:layout_marginStart="240dp"
-                android:src="@drawable/notification" />
-
-
-        </RelativeLayout>
-
 
         <Button
             android:id="@+id/create_job"
@@ -136,6 +109,7 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="#31EF39"
             android:padding="20dp"
+            android:layout_marginTop="30dp"
             android:text="Create a job"
             android:textColor="@color/black"
             android:textSize="16sp" />

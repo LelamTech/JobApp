@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".job_add"
+    tools:context="com.example.JobApp.job_add"
     android:background="@drawable/bg_view">
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/border"
+        android:background="@drawable/solid"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,8 @@
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
-            android:hint="@string/companyname"
+            android:hint="Company Name"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -62,6 +63,7 @@
             android:background="@android:drawable/editbox_background"
             android:ems="10"
             android:hint="@string/title"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -74,6 +76,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
+            android:textColorHint="@color/black"
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
@@ -91,6 +94,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="16dp"
+            android:textColorHint="@color/black"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
             android:hint="@string/type"
@@ -107,6 +111,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="16dp"
+            android:textColorHint="@color/black"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
             android:hint="@string/salary"
@@ -125,6 +130,7 @@
             android:layout_marginBottom="6dp"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
+            android:textColorHint="@color/black"
             android:hint="@string/description"
             android:inputType="textPersonName"
             android:textColor="@color/black"

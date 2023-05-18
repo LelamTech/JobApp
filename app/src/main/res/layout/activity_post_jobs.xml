@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/top_box"
-    tools:context=".post_jobs">
+    tools:context="com.example.JobApp.post_jobs">
 
     <TextView
         android:id="@+id/post_jobs"
@@ -56,25 +56,16 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Recently Post Jobs "
+            android:textColor="@color/black"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvJob"
+        <ListView
+            android:id="@+id/jobListingListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/activity_postjobs_list" />
-
-        <TextView
-            android:id="@+id/tvLoadingData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Loading Data....."
-            android:textSize="28sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:visibility="gone" />
+            android:layout_height="match_parent"
+            />
 
 
     </LinearLayout>

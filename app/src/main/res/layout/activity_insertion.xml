@@ -9,8 +9,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/bg_view"
-    tools:context=".InquiryMainActivity"
+    android:background="@drawable/solid"
+    tools:context="com.example.JobApp.activity_insertion"
     >
 
     <androidx.cardview.widget.CardView

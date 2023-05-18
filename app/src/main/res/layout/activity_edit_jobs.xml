@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edit_jobs"
+    tools:context="com.example.JobApp.edit_jobs"
     android:background="@drawable/bg_view"
     android:padding="10dp">
 
@@ -26,7 +26,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_box"
-            android:hint="Company Name"
+            android:hint="Company"
             android:inputType="textPersonName"
             android:textColor="#0E0D0D"
             android:textColorHint="@color/black" />
@@ -38,7 +38,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/background_box"
             android:ems="10"
-            android:hint="Job title"
+            android:hint="Job Title"
             android:textColor="#040303"
             android:textColorHint="@color/black" />
 
@@ -61,7 +61,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/background_box"
             android:ems="10"
-            android:hint="Job type"
+            android:hint="Job Type"
             android:inputType="textPersonName"
             android:textColor="#070606"
             android:textColorHint="@color/black" />

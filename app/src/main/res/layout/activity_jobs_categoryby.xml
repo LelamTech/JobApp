@@ -7,62 +7,25 @@
     android:layout_marginTop="16dp"
     android:foregroundTint="#433E3E"
     app:layout_wrapBehaviorInParent="included"
-    tools:context=".jobs_categoryby">
+    tools:context="com.example.JobApp.jobs_categoryby">
 
 
-    <SearchView
-        android:id="@+id/searchbar"
-        android:layout_width="373dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/background_box"
-        android:backgroundTint="#EAE9E9"
-        android:queryHint="Search here"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/categryNme"
-        android:layout_width="374dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:text="You selected construction category"
-        android:textColor="#000000"
-        android:textSize="@dimen/Category_NAme"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchbar" />
+    <Button
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_back"
+        android:text="Home"
+        android:drawableLeft="@android:drawable/ic_media_previous"
 
-    <RelativeLayout
-        android:layout_width="418dp"
-        android:layout_height="675dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categryNme">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="562dp">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvJob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_box"
-                tools:listitem="@layout/activity_job_list" />
-        </ScrollView>
+        />
 
 
-    </RelativeLayout>
+    <ListView
+        android:id="@+id/jobListingListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 
 

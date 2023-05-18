@@ -1,8 +1,17 @@
 <resources>
-    <string name="app_name">job_portal</string>
+    <string name="app_name">JobApp</string>
     <string name="layout">activity_listing.xml</string>
-    <string name="Job_seeker_name">jone doe</string>
-    <string name="job_seeker_location">Colombo,Sri lanka</string>
+    <string name="Job_seeker_name">Ryan Kim</string>
+    <string name="startup_title">Hello there!</string>
+    <string name="startup_sub">Nice to meet you,you are welcome to join our community!Help others..while helping yourself
+        <br><b>Login</b>If you already have an account.</br>
+        <br><b>Register</b>to get started on your journey.</br></string>
+    <string name="Illustration_img">Illustration Image</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="home_title">Welcome to Ken Job</string>
+    <string name="home_sub_title">Bringing the Community together</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="job_seeker_location">Nairobi,Kenya</string>
     <string name="Job_seeker_about">About me</string>
     <string name="Job_seeker_desc">description</string>
     <string name="job_seeker_edit">Edit Profile</string>
@@ -31,8 +40,8 @@
     <string name="form_mobile">"Mobile "</string>
     <string name="form_cv">Upload Here CV</string>
     <string name="submit_btn">SUBMIT</string>
-    <string name="success_msg">Congratulations,Your application has been sent</string>
-    <string name="another_btn">Find Another JOB</string>
+    <string name="success_msg">Congratulations,Your Job has been posted</string>
+    <string name="another_btn">Thank You</string>
 
 
     <string name="company">Companies</string>
@@ -46,21 +55,12 @@
     <string name="pre">xxxxxxxxxxxxxxxxxxx</string>
     <string name="hint2">xxxxxxxxxxxxxxxx</string>
     <string name="hint3">xxxxxxxxxxxxx</string>
-    <string name="freelance1">What is Freelancing?</string>
-    <string name="para1">Being freelance, or self-employed, means that rather than signing a contract to work for one company, you work for yourself and manage your own tax affairs. This gives you the freedom to work for whoever you like, as much or as little as you want. You\'re flexible and the ruler of your own destiny.</string>
-    <string name="next1">next</string>
-    <string name="freeelance2">How to become a Freelancer?</string>
-    <string name="para2">To become a freelancer, first identify your skills and create a portfolio showcasing your abilities. Determine your rates and find clients through platforms like Upwork or social media. Build a reputation by delivering high-quality work and providing excellent customer service. Keep learning and growing your skills to stay competitive in the freelance market.</string>
-    <string name="Freelancing">Freelancing</string>
-    <string name="more">Read More</string>
     <string name="ReadMore">Read More</string>
     <string name="add">Add Inquiries</string>
     <string name="name">Username</string>
     <string name="mail">Type email</string>
     <string name="msg">Type Message Here</string>
     <string name="submitbtn">Submit</string>
-    <string name="interview">Improving your interview skills can make a big difference in landing a job. To prepare for an interview, start by researching the company and its mission. This will help you to answer questions about why you want to work there and what you can contribute to the company. Practice common interview questions out loud to build your confidence and improve your responses. It\'s also important to dress professionally, arrive early, and make a good first impression. During the interview, listen carefully to the questions and take your time when answering. Finally, remember to thank the interviewer for their time and follow up with a thank you note or email.</string>
-    <string name="job">count</string>
     <string name="free">Skills</string>
     <string name="skills">Inquiry List</string>
     <string name="feedbackAdd">Feedback List</string>

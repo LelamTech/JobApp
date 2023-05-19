@@ -2,7 +2,6 @@ package com.example.JobApp
 
 
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -11,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
+
 
 class activity_insertion : AppCompatActivity(){
 
@@ -24,7 +23,7 @@ class activity_insertion : AppCompatActivity(){
 
 
     //create db reference
-    private lateinit var dbRef: SQLiteDatabase
+    private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +34,8 @@ class activity_insertion : AppCompatActivity(){
         email = findViewById(R.id.Email)
         Msg = findViewById(R.id.Msg)
         btnSaveData = findViewById(R.id.btnSave)
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Inquiries")
 
 
         //save data
@@ -60,6 +61,24 @@ class activity_insertion : AppCompatActivity(){
         if (Inq.isEmpty()) {
             Msg.error = "Please enter a message"
         }
+
+        val Id = dbRef.push().key!!
+
+        val inquiry = InquiryModel(Id,Name,Email,Inq)
+
+        dbRef.child(Id).setValue(inquiry)
+            .addOnCompleteListener {
+                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
+
+                username.text.clear()
+                email.text.clear()
+                Msg.text.clear()
+
+
+            }.addOnFailureListener { err ->
+                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+            }
+
 
 
         btnJob.setOnClickListener{

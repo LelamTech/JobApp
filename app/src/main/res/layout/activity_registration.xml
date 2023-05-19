@@ -81,7 +81,7 @@
                 android:id="@+id/registration_conf_password"
                 android:layout_margin="10dp"
                 android:minHeight="48dp"
-                android:hint="Password"
+                android:hint="Confirm Password"
                 android:inputType="textPassword"
                 android:drawablePadding="20dp"
                 android:background="@drawable/input_bg"

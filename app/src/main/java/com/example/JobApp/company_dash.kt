@@ -4,62 +4,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
 class company_dash : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_dash)
 
-        val createJob = findViewById<Button>(R.id.create_job)
-        val tvJobCount = findViewById<TextView>(R.id.tvJobCount)
-        val rvJobCount = findViewById<TextView>(R.id.rvJobCount)
-
-        val comId = intent.getStringExtra("comId")
-        var dbRef = FirebaseDatabase.getInstance().getReference("Jobs")
-        dbRef.orderByChild("CcomId").equalTo(comId).addValueEventListener(object :
-            ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val jobCount = snapshot.childrenCount.toInt()
-                tvJobCount.text = "Post Jobs: $jobCount"
-            }
-
-
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-
-        val fullName = intent.getStringExtra("fullName")
-        var sdbRef = FirebaseDatabase.getInstance().getReference("jobForms")
-        sdbRef.orderByChild("sfullName").equalTo(fullName).addValueEventListener(object :
-            ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val rjobCount = snapshot.childrenCount.toInt()
-                rvJobCount.text = "Recieve Job Application: $rjobCount"
-            }
-
-
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-
+        val  createJob = findViewById<Button>(R.id.create_job)
 
         createJob.setOnClickListener {
             val intent = Intent(this@company_dash, job_add::class.java)
             startActivity(intent)
             finish()
         }
+
 
         val  viewJobs = findViewById<Button>(R.id.view_jobs)
 

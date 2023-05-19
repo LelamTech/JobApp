@@ -4,26 +4,38 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var registerButton: Button
+    private lateinit var login_reg:TextView
 
     private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
+        login_reg = findViewById(R.id.btn_log_in)
         emailEditText = findViewById(R.id.email_registration)
         passwordEditText = findViewById(R.id.registration_password)
         registerButton = findViewById(R.id.btn_register)
 
         auth = FirebaseAuth.getInstance()
+
+        login_reg.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+
+            finish()
+        }
 
         registerButton.setOnClickListener {
             val email = emailEditText.text.toString()

@@ -26,17 +26,6 @@ class job_add : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_add)
 
-        postbutton.setOnClickListener {
-            val inputText = description.text.toString().trim()
-            if (inputText.isEmpty()) {
-                // Display an error message or toast indicating that the field is required
-                Toast.makeText(this, "Please fill in the required field.", Toast.LENGTH_SHORT).show()
-            } else {
-                // Proceed to the next activity
-                val intent = Intent(this, post_jobs::class.java)
-                startActivity(intent)
-            }
-        }
 
         companyname = findViewById(R.id.companyname)
         title = findViewById(R.id.title)
@@ -49,8 +38,6 @@ class job_add : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Jobs")
 
         postbutton.setOnClickListener {
-            val intent = Intent(this, card_view::class.java)
-            startActivity(intent)
             saveCompanyData()
         }
     }

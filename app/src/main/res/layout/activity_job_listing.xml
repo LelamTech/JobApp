@@ -4,31 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     android:background="@drawable/solid"
+    android:padding="16dp"
     tools:context=".JobListingActivity">
-
-    <Button
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_back"
-        android:text="Home"
-        android:drawableLeft="@android:drawable/ic_media_previous"
-        />
 
     <EditText
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search jobs"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:inputType="text" />
-
+        android:hint="Search Jobs"
+        android:drawableLeft="@drawable/search"/>
 
     <ListView
-        android:id="@+id/jobListingListView"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
 
 </LinearLayout>

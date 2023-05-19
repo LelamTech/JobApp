@@ -1,5 +1,6 @@
 package com.example.JobApp
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -42,12 +43,13 @@ class JobListingActivity : AppCompatActivity() {
 
         filteredJobs = ArrayList(jobs)
 
-        listView.onItemClickListener =
-            AdapterView.OnItemClickListener { parent, view, position, id ->
-                val selectedJob = jobs[position]
-                Toast.makeText(this, "Clicked on $selectedJob", Toast.LENGTH_SHORT).show()
-                // Perform any desired actions on item click here
-            }
+
+
+        listView.setOnItemClickListener { parent, view, position, id ->
+            // Handle the click event here
+            val intent = Intent(this, activity_insertion::class.java)
+            startActivity(intent)
+        }
 
 
         searchEditText.addTextChangedListener(object : TextWatcher {

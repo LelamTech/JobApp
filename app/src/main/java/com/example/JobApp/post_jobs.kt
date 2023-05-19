@@ -63,7 +63,7 @@ class post_jobs : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val jobs = ArrayList<String>()
 
-                // Iterate through each child node
+
                 for (snapshot in dataSnapshot.children) {
                     val job = snapshot.getValue(CompanyData::class.java)
                     job?.let {
@@ -76,7 +76,7 @@ class post_jobs : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Handle any errors that occur during data fetching
+
                 // TODO: Handle the error as per your requirements
             }
         })
